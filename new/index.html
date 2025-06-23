@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Shield - Advanced Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt" class="logo-icon"></i>
+        
+                Truth Shield
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="active">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Services</a>
+                    <div class="dropdown-content glass-effect">
+                        <a href="http://localhost:3001/" class="dropdown-item" target="_blank">
+                            <i class="icon">📝</i>
+                            <div class="dropdown-text">
+                                <h4>Text Analysis</h4>
+                                <p>Detect fake news and misinformation</p>
+                            </div>
+                        </a>
+                        <a href="/image-detection" class="dropdown-item" target="_blank">
+                            <i class="icon">🖼️</i>
+                            <div class="dropdown-text">
+                                <h4>Image Analysis</h4>
+                                <p>Identify manipulated images</p>
+                            </div>
+                        </a>
+                        <a href="/video-detection" class="dropdown-item" target="_blank">
+                            <i class="icon">🎥</i>
+                            <div class="dropdown-text">
+                                <h4>Video Analysis</h4>
+                                <p>Detect deepfake videos</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="contact.html">Contact</a>
+                <a href="#">News</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1 class="glowing-text">Protecting Truth with Deepfake Detection</h1>
+                    <p>Our advanced technology detects fake news, deepfakes in videos, and manipulated images in real-time, ensuring you trust what you see and read.</p>
+                    <div class="hero-buttons">
+                        <button class="cta-button" onclick="window.open('/image-detection', '_blank')">Get Started</button>
+                        <button class="secondary-button" onclick="window.location.href='#services'">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="image-container">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/face.jpg-7El1LSxNPkAagvPRCpHgGKawvA6dAq.jpeg" alt="AI Detection" class="floating">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="gradient-overlay"></div>
+                <div class="particles" id="particles"></div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <div class="service-boxes">
+                <div class="service-box glass-card" data-aos="fade-up" data-aos-delay="100" onclick="window.open('http://localhost:3001/', '_blank')">
+                    <div class="service-icon">📝</div>
+                    <h3>News Analysis</h3>
+                    <p>Analyze text for fake news using AI to detect inconsistencies, bias, and manipulated content instantly.</p>
+                    <div class="service-hover">
+                        <span class="try-now">Try Now →</span>
+                    </div>
+                </div>
+                <div class="service-box glass-card" data-aos="fade-up" data-aos-delay="200" onclick="window.open('/image-detection', '_blank')">
+                    <div class="service-icon">🖼️</div>
+                    <h3>Image Analysis</h3>
+                    <p>Identify deepfakes and alterations in images with precision, highlighting tampered areas.</p>
+                    <div class="service-hover">
+                        <span class="try-now">Try Now →</span>
+                    </div>
+                </div>
+                <div class="service-box glass-card" data-aos="fade-up" data-aos-delay="300" onclick="window.open('/video-detection', '_blank')">
+                    <div class="service-icon">🎥</div>
+                    <h3>Video Analysis</h3>
+                    <p>Detect deepfakes in videos by analyzing frame-by-frame for lip sync issues and unnatural movements.</p>
+                    <div class="service-hover">
+                        <span class="try-now">Try Now →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-section brand">
+                <div class="footer-logo">
+                    <h3>Truth Shield</h3>
+                </div>
+                <p>Protecting truth with advanced deepfake detection technology.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About Us</a>
+                <a href="features.html">Features</a>
+                <a href="help-center.html">Help Center</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="careers.html">Careers</a>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Subscribe to our Newsletter</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="newsletter-button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Truth Shield, Inc.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="strategy.html">Strategy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="static/js/home.js"></script>
+</body>
+</html>
